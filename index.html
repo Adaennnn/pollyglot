@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PollyGlot - Perfect Translation Every Time</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="assets/parrot.png" alt="PollyGlot Parrot" class="parrot-logo">
+                <div class="brand">
+                    <h1 class="brand-name">PollyGlot</h1>
+                    <p class="tagline">Perfect Translation Every Time</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Input View -->
+            <div id="input-view" class="panel view-panel">
+                <div class="panel-header">
+                    <h2>Text to translate ✍️</h2>
+                </div>
+                <div class="panel-body">
+                    <textarea 
+                        id="input-text" 
+                        class="text-input" 
+                        placeholder="Enter text to translate..."
+                    ></textarea>
+                    
+                    <div class="language-section">
+                        <h3>Select language ✨</h3>
+                        <div class="language-options">
+                            <label class="language-option">
+                                <input type="radio" name="language" value="french" checked>
+                                <span class="language-label">
+                                    French
+                                    <img src="assets/fr-flag.png" alt="French" class="flag-icon">
+                                </span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="spanish">
+                                <span class="language-label">
+                                    Spanish
+                                    <img src="assets/sp-flag.png" alt="Spanish" class="flag-icon">
+                                </span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="japanese">
+                                <span class="language-label">
+                                    Japanese
+                                    <img src="assets/jpn-flag.png" alt="Japanese" class="flag-icon">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button id="translate-btn" class="btn btn-primary">
+                        Translate
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results View -->
+            <div id="results-view" class="panel view-panel" style="display: none;">
+                <div class="panel-header">
+                    <h2>Original text 💬</h2>
+                </div>
+                <div class="panel-body">
+                    <div id="original-text" class="original-text">
+                        
+                    </div>
+                    
+                    <div class="translation-section">
+                        <h3>Your translation ✨</h3>
+                        <div id="translated-text" class="translated-text">
+                            
+                        </div>
+                    </div>
+                    
+                    <button id="start-over-btn" class="btn btn-primary">
+                        Start Over
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
