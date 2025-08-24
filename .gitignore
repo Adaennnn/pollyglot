@@ -41,5 +41,10 @@ secrets.json
 temp/
 tmp/
 
+# Backup files
+*.save
+*.bak
+*.backup
+
 # Screenshots
 Screenshot*.png
