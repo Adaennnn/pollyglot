@@ -1,4 +1,4 @@
-# PollyGlot - Perfect Translation Every Time
+# PollyGlot
 
 A modern web application for instant language translation powered by OpenAI's GPT-4o-mini model. Built with TypeScript, Vite, and a modular architecture for production-ready deployment.
 
@@ -129,24 +129,3 @@ This will:
 1. Run TypeScript compilation
 2. Bundle and optimize assets
 3. Generate production-ready files in the `dist/` directory
-
-## Deployment
-
-The built application can be deployed to any static hosting service:
-- Netlify
-- Vercel
-- GitHub Pages
-- AWS S3
-- Traditional web servers
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
-
-## License
-
-ISC
