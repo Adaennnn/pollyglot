@@ -1,0 +1,60 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+PollyGlot is a vanilla JavaScript translation web application that uses OpenAI's GPT-4o-mini model for translations. The app features a single-page design with two views that switch between input and results states.
+
+## Architecture
+
+### Application Flow
+1. **Input View** (`#input-view`): User enters text and selects target language
+2. **Results View** (`#results-view`): Displays original text and translation after API call
+3. View switching is handled by `showInputView()` and `showResultsView()` functions
+
+Thanks! Let's refine the CLAUDE.md file
+### Key Components
+- **index.html**: Single HTML file with two view panels that toggle visibility
+- **index.css**: Organized into logical sections (Global Reset, Layout, Header, Form Elements, Language Selection, Buttons, Translation Areas, Responsive Design)
+- **index.js**: Handles view switching, API calls to OpenAI, and user interactions
+
+## Development Setup
+
+### Running the Application
+```bash
+# Open index.html directly in a browser
+# No build process or dependencies required
+```
+
+### API Configuration
+The OpenAI API key needs to be set in `index.js` line 3:
+```javascript
+const OPENAI_API_KEY = 'your_api_key_here'
+```
+
+## Important Implementation Details
+
+### Translation API
+- Uses OpenAI Chat Completions API with `gpt-4o-mini` model
+- Temperature set to 0.3 for consistent translations
+- System prompt instructs to return only the translation without explanations
+
+### Supported Languages
+- French (`french`)
+- Spanish (`spanish`) 
+- Japanese (`japanese`)
+
+### User Experience Flow
+1. User enters text in input view
+2. Clicking "Translate" sends request to OpenAI API
+3. App switches to results view showing both original and translated text
+4. "Start Over" button resets the app to initial state
+
+### Keyboard Shortcuts
+- `Ctrl+Enter` in the text input triggers translation
+
+## File Structure Notes
+- Assets in `/assets/`: Flag images, parrot logo, world map background
+- No build process - pure vanilla JavaScript, HTML, and CSS
+- Design mockup screenshot should be gitignored per `.gitignore`
